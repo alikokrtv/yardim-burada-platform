@@ -40,7 +40,7 @@ Route::get('/groups', function () {
             'user' => auth()->user()
         ]
     ]);
-})->name('groups.index');
+})->name('groups.page');
 
 Route::get('/events', function () {
     return Inertia::render('Events/Index', [
@@ -48,7 +48,7 @@ Route::get('/events', function () {
             'user' => auth()->user()
         ]
     ]);
-})->name('events.index');
+})->name('events.page');
 
 Route::get('/nearby', function () {
     return Inertia::render('Nearby/Index', [
